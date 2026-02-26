@@ -1,0 +1,10 @@
+n=int(input())
+value=[]
+if n%2!=0:
+    value.append(-1)
+else:
+    for i in range(1,n+1):
+        value.append(i)
+    for i in range(0,n,2):
+        value[i],value[i+1] = value[i+1],value[i] 
+print(*value)
