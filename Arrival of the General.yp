@@ -1,0 +1,9 @@
+n=int(input())
+values=list(map(int,input().split()))
+max_p=values.index(max(values))
+min_p=n-1-values[::-1].index(min(values))
+if (max_p > min_p):
+    time=(max_p+(n-min_p)-2)
+else:
+    time=(max_p+(n-min_p)-1)
+print(time)
